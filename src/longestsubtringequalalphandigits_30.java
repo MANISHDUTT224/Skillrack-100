@@ -9,8 +9,8 @@ public class longestsubtringequalalphandigits_30{
         String str=s.nextLine();
         int n=str.length();
         HashMap<Integer,Integer>mp=new HashMap<>();
-        int count=0,pos=0,maxlen=0,curlen;
         mp.put(0,0);
+        int maxlen=0,curlen,pos=0,count=0;
         for(int i=0;i<n;i++){
             pos++;
             if(Character.isAlphabetic(str.charAt(i))){
@@ -21,10 +21,11 @@ public class longestsubtringequalalphandigits_30{
             }
             if(mp.containsKey(count)){
                 curlen=pos-mp.get(count);
-                maxlen=Math.max(curlen,maxlen);
+                maxlen=Math.max(maxlen,curlen);
             }
             else{
                 mp.put(count,pos);
+
             }
         }
         System.out.println(maxlen);
