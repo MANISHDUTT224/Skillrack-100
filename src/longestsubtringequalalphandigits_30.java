@@ -1,8 +1,5 @@
-import org.w3c.dom.ls.LSOutput;
-
 import java.util.HashMap;
 import java.util.Scanner;
-
 public class longestsubtringequalalphandigits_30{
     public static void main(String[] args) {
         Scanner s=new Scanner(System.in);
@@ -25,10 +22,8 @@ public class longestsubtringequalalphandigits_30{
             }
             else{
                 mp.put(count,pos);
-
             }
         }
         System.out.println(maxlen);
-
     }
 }

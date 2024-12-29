@@ -1,5 +1,4 @@
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.Collections;
 import java.util.Scanner;
 
@@ -10,6 +9,7 @@ public class sortedstringcharcombinations_31 {
         s=sc.nextLine();
         ArrayList<String>arr=new ArrayList<>();
         int n=s.length();
+        arr.add(s);
         for(int ctr=1;ctr<Math.pow(2,n);ctr++){
             String temp="";
             for(int i=0;i<n;i++){
@@ -18,12 +18,10 @@ public class sortedstringcharcombinations_31 {
                 }
             }
             arr.add(temp);
-
         }
         Collections.sort(arr);
         for(String str:arr){
             System.out.println(str);
         }
-
     }
 }

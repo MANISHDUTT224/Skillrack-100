@@ -4,7 +4,7 @@ import java.util.Set;
 import java.util.TreeSet;
 
 public class perumutationofstring_33{
-    public static void findcomb(String str,int l,int r,Set<String>result){
+    public static void findcomb(String str,int l,int r){
         if(l==r){
             System.out.println(str);
             return ;
@@ -12,7 +12,7 @@ public class perumutationofstring_33{
         for(int i=l;i<=r;i++){
             str=swap(str,i,l);
 
-            findcomb(str,l+1,r,result);
+            findcomb(str,l+1,r);
             str=swap(str,i,l);
         }
     }
@@ -27,8 +27,7 @@ public class perumutationofstring_33{
         Scanner s=new Scanner(System.in);
         String str=s.nextLine();
         int  n=str.length();
-        Set<String> result=new TreeSet<>();
-        findcomb(str,0,n-1,result);
+        findcomb(str,0,n-1);
 
     }
 }

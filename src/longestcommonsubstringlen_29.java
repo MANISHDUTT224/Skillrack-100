@@ -23,7 +23,6 @@ public class longestcommonsubstringlen_29{
                     }
                 }
                 longest=Math.max(longest,dp[i][j]);
-
             }
         }
         System.out.println("Longest common substring length : "+longest);
