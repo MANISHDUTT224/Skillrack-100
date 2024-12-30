@@ -1,7 +1,6 @@
 import java.util.Scanner;
 
 public class minsumkxksubarray_40 {
-
     public static void main(String[] args) {
         Scanner s=new Scanner(System.in);
         int r=s.nextInt();
@@ -19,7 +18,6 @@ public class minsumkxksubarray_40 {
                 dp[i][j]+=mat[i][j-1]+dp[i][j-1];
 
             }
-
         }
         int minsum=Integer.MAX_VALUE;
         for(int i=0;i<=r-k;i++){

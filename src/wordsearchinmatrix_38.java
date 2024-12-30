@@ -34,7 +34,6 @@ public class wordsearchinmatrix_38 {
         }
         s.nextLine();
         String word=s.nextLine();
-
         for(int i=0;i<r;i++){
             for(int j=0;j<c;j++){
                 if(mat[i][j]==word.charAt(0)){

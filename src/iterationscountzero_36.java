@@ -1,8 +1,6 @@
 import java.util.Scanner;
-
 public class iterationscountzero_36 {
     public static void traverse(int mat[][],int i,int j){
-
         int n=mat.length;
         int m=mat[0].length;
         if(i>=0 && i<n && j>=0 && j<m){

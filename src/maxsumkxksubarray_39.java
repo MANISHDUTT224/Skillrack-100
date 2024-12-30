@@ -18,7 +18,6 @@ public class maxsumkxksubarray_39 {
                 dp[i][j]+=mat[i][j-1]+dp[i][j-1];
 
             }
-
         }
         int maxsum=Integer.MIN_VALUE;
         for(int i=0;i<=r-k;i++){
