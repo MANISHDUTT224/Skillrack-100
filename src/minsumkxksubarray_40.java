@@ -16,20 +16,28 @@ public class minsumkxksubarray_40 {
         for(int i=0;i<r;i++){
             for(int j=1;j<=c;j++){
                 dp[i][j]+=mat[i][j-1]+dp[i][j-1];
-
             }
+        }
+        for(int i=0;i<r;i++){
+            for(int j=0;j<=c;j++){
+                System.out.print(dp[i][j]+" ");
+            }
+            System.out.println();
         }
         int minsum=Integer.MAX_VALUE;
         for(int i=0;i<=r-k;i++){
             for(int j=0;j<=c-k;j++){
                 int sum=0;
-                for(int srow=i;srow<i+k;srow++){
-                    sum+=dp[srow][j+k]-dp[srow][j];
+                for(int subrow=i;subrow<i+k;subrow++){
+                    sum+=dp[subrow][j+k]-dp[subrow][j];
                 }
-                minsum=Math.min(sum,minsum);
+                minsum=Math.max(minsum,sum);
             }
         }
         System.out.println(minsum);
+
     }
 }
+
+
 
