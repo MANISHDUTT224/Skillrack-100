@@ -22,7 +22,7 @@ Contributions are welcome! If you have a better solution or an explanation, feel
 This repository is licensed under the MIT License. Feel free to use the code, but kindly provide attribution if you’re sharing or modifying it.
 
 ## Contact
-If you have any questions or suggestions, feel free to reach out via GitHub issues or email at `your-email@example.com`.
+If you have any questions or suggestions, feel free to reach out via GitHub issues or email at `manisunildutt@gmail.com`.
 
 ---
 
