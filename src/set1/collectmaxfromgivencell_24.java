@@ -1,7 +1,10 @@
-import java.util.*;
-public class maxgamepoints_23{
+package set1;
+
+import java.util.Scanner;
+
+public class collectmaxfromgivencell_24{
     public static void main(String[] args) {
-        Scanner s=new Scanner(System.in);
+         Scanner s=new Scanner(System.in);
         int rows,cols;
         rows=s.nextInt();
         cols=s.nextInt();
@@ -12,15 +15,17 @@ public class maxgamepoints_23{
                 mat[i][j]=s.nextInt();
             }
         }
+        int x=s.nextInt();
+        int y=s.nextInt();
         dp[0][0]=mat[0][0];
-        for(int i=1;i<rows;i++){
-            dp[i][0]=mat[i-1][0]+dp[i][0];
+        for(int i=x+1;i<rows;i++){
+            dp[i][y]=mat[i][y]+dp[i-1][y];
         }
-        for(int j=1;j<cols;j++){
-            dp[0][j]=mat[0][j-1]+dp[0][j];
+        for(int j=y+1;j<cols;j++){
+            dp[x][j]=mat[x][j]+dp[x][j-1];
         }
-        for(int i=1;i<rows;i++){
-            for(int j=1;j<cols;j++){
+        for(int i=x+1;i<rows;i++){
+            for(int j=y+1;j<cols;j++){
                 dp[i][j]=mat[i][j]+Math.max(dp[i-1][j],dp[i][j-1]);
             }
         }

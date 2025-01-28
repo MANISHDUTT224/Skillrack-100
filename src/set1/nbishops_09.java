@@ -1,3 +1,5 @@
+package set1;
+
 import java.util.Scanner;
 
 public class nbishops_09 {

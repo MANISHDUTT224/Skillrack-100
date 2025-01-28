@@ -1,3 +1,5 @@
+package set1;
+
 import java.util.*;
 public class minoprfromzeroton_21 {
     public static void main(String[] args) {
