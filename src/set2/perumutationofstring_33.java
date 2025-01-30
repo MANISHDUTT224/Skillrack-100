@@ -1,7 +1,6 @@
+package set2;
 
 import java.util.Scanner;
-import java.util.Set;
-import java.util.TreeSet;
 
 public class perumutationofstring_33{
     public static void findcomb(String str,int l,int r){

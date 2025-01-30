@@ -1,3 +1,5 @@
+package set2;
+
 import java.util.Scanner;
 public class nearestnumpermutation_34 {
     private static int closest;

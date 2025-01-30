@@ -1,3 +1,5 @@
+package set2;
+
 import java.util.Scanner;
 
 public class maxsumkxksubarray_39 {

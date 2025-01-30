@@ -1,3 +1,5 @@
+package set2;
+
 import java.util.Scanner;
 //5 2 1    2 3    2
 public class staircaseclimbingwithdamagedstairs_27 {

@@ -1,3 +1,5 @@
+package set2;
+
 import java.util.Scanner;
 public class iterationscountzero_36 {
     public static void traverse(int mat[][],int i,int j){

@@ -1,5 +1,6 @@
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.List;
 import java.util.Scanner;
 
 public class sortedstringcharcombinations_31 {
@@ -10,18 +11,18 @@ public class sortedstringcharcombinations_31 {
         ArrayList<String>arr=new ArrayList<>();
         int n=s.length();
         arr.add(s);
-        for(int ctr=1;ctr<Math.pow(2,n);ctr++){
-            String temp="";
-            for(int i=0;i<n;i++){
-                if((ctr&(1<<i))==0){
-                    temp+=s.charAt(i);
-                }
-            }
-            arr.add(temp);
-        }
-        Collections.sort(arr);
-        for(String str:arr){
-            System.out.println(str);
-        }
+       for(int ctr=1;ctr<Math.pow(2,n);ctr++){
+           String temp="";
+           for(int i=0;i<n;i++){
+               if((ctr&(1<<i))==0){
+                   temp+=s.charAt(i);
+               }
+           }
+           arr.add(temp);
+       }
+       Collections.sort(arr);
+       for(String st:arr){
+           System.out.println(st);
+       }
     }
 }

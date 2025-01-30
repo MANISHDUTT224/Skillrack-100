@@ -1,4 +1,5 @@
-import java.util.HashMap;
+package set2;
+
 import java.util.Scanner;
 
 public class smallestpossibleoddinteger_44 {

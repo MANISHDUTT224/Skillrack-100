@@ -1,6 +1,9 @@
+package set2;
+
+import java.util.Arrays;
 import java.util.Scanner;
 
-public class stockbuyandsellmultipletime_42 {
+public class leastimmeasurableweight_50 {
     public static void main(String[] args) {
         Scanner s=new Scanner(System.in);
         int n=s.nextInt();
@@ -8,29 +11,25 @@ public class stockbuyandsellmultipletime_42 {
         for(int i=0;i<n;i++){
             arr[i]=s.nextInt();
         }
-        int maxprofit=0;
-        for(int i=1;i<n;i++){
-            if(arr[i]>arr[i-1]){
-                maxprofit+=arr[i]-arr[i-1];
+        Arrays.sort(arr);
+        int m=1;
+        for(int i=0;i<n;i++){
+            if(m>=arr[i]){
+                m+=arr[i];
             }
         }
-        System.out.println(maxprofit);
+        System.out.println(m);
     }
 }
-
 /*
 Test Case 1:
-6
-7 1 5 3 6 4
-Output:
-7
-5
-1 2 3 4 5
-Output:
 4
-Test Case 3:
-5
-7 6 4 3 1
+1 2 10 4
 Output:
-0
+8
+Test Case 2:
+4
+1 2 1 5
+Output:
+10
  */

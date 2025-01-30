@@ -1,3 +1,5 @@
+package set2;
+
 import java.util.Scanner;
 public class islandcount_37 {
     public static void traverse(int mat[][],int r,int c){
