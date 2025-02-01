@@ -40,6 +40,7 @@ public class maxcoinsbottomrowcannotpick_60 {
     }
 }
 /*
+Single test case:
 2
 5 5
 25 98 74 11 89
@@ -47,7 +48,6 @@ public class maxcoinsbottomrowcannotpick_60 {
 4 19 99 48 41
 40 22 97 72 1
 29 67 61 92 49
-
 10 2
 55 57
 87 32
