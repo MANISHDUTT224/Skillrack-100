@@ -1,3 +1,5 @@
+package set3;
+
 import java.util.Scanner;
 
 public class singlevaluerepeatedoddtimes_75

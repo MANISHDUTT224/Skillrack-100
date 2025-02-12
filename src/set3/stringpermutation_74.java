@@ -1,4 +1,4 @@
-//Same as 33 but in c
+package set3;//Same as 33 but in c
 
 import java.util.Scanner;
 

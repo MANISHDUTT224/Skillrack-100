@@ -1,3 +1,5 @@
+package set3;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
@@ -22,22 +24,23 @@ public class maximumvendorprofit_55 {
             it.profit=s.nextInt();
             items.add(it);
         }
-        for(int item=1;item<=k;item++){
-            if(items.get(item).costprice>n){
-                System.out.println(mat[item-1][n]);
-                return;
-            }
-            for(int amt=1;amt<=n;amt++){
-                if(items.get(item).costprice>amt){
-                    mat[item][amt]=mat[item-1][amt];
-                }
-                else{
-                    int incprofit=items.get(item).profit+mat[item-1][amt-items.get(item).costprice];
-                    int excprofit=mat[item-1][amt];
-                    mat[item][amt]=Math.max(incprofit,excprofit);
-                }
-            }
-        }
+      for(int item=1;item<=k;item++){
+          if(items.get(item).costprice>n){
+              System.out.println(mat[item-1][n]);
+              return;
+          }
+          for(int amt=1;amt<=n;amt++){
+              if(items.get(item).costprice>amt){
+                  mat[item][amt]=mat[item-1][amt];
+              }
+              else{
+                  int incprofit=items.get(item).profit+mat[item-1][amt-items.get(item).costprice];
+                   int excprofit=mat[item-1][amt];
+                  mat[item][amt]=Math.max(incprofit,excprofit);
+              }
+          }
+      }
+
         System.out.println(mat[k][n]);
     }
 }

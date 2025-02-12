@@ -1,4 +1,5 @@
-import java.util.Arrays;
+package set3;
+
 import java.util.Scanner;
 
 public class subsetsumequalevencombinations_70 {
@@ -11,22 +12,21 @@ public class subsetsumequalevencombinations_70 {
             arr[i]=s.nextInt();
             totalsum+=arr[i];
         }
-        Arrays.sort(arr);
         boolean[][]subsetdp=new boolean[n+1][totalsum+1];
         for(int i=1;i<=n;i++){
-            int currsum=arr[i-1];
-            for(int sum=0;sum<=totalsum;sum++){
-                if(sum>=currsum &&(sum==currsum |subsetdp[i-1][sum-currsum])){
-                    subsetdp[i][sum]=true;
+            int cursum=arr[i-1];
+            for(int csum=0;csum<=totalsum;csum++){
+                if(csum>=cursum&&(csum==cursum||subsetdp[i-1][csum-cursum])){
+                    subsetdp[i][csum]=true;
                 }
                 else{
-                    subsetdp[i][sum]=subsetdp[i-1][sum];
+                    subsetdp[i][csum]=subsetdp[i-1][csum];
                 }
             }
         }
         int counter=0;
-        for(int sum=2;sum<=totalsum;sum+=2){
-            if(subsetdp[n][sum]){
+        for(int i=2;i<=totalsum;i+=2){
+            if(subsetdp[n][i]){
                 counter++;
             }
         }

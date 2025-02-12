@@ -1,3 +1,5 @@
+package set3;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
@@ -7,7 +9,7 @@ public class channelremaining_72 {
         Scanner s=new Scanner(System.in);
         int n=s.nextInt();
         int k=s.nextInt();
-        List<Integer> channels=new ArrayList<>();
+        List<Integer>channels=new ArrayList<>();
         for(int i=0;i<n;i++){
             channels.add(i+1);
         }
@@ -15,6 +17,7 @@ public class channelremaining_72 {
         while(channels.size()>1){
             if(delindex>=channels.size()){
                 delindex%=channels.size();
+
             }
             channels.remove(channels.get(delindex));
             delindex--;

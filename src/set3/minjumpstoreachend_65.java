@@ -1,3 +1,5 @@
+package set3;
+
 import java.util.Scanner;
 
 public class minjumpstoreachend_65{
@@ -6,25 +8,20 @@ public class minjumpstoreachend_65{
         int n=s.nextInt();
         if(n==1){
             System.out.println(0);
-            return;
         }
-        int arr[]=new int[n];
+        int arr[]=new int[n+1];
         for(int i=0;i<n;i++){
             arr[i]=s.nextInt();
         }
-
-        int jumps=1,maxreachindex=arr[0],steps=arr[0];
-        for(int ind=1;ind<n;ind++){
-            if(ind==n-1){
-                break;
-            }
-            maxreachindex=Math.max(maxreachindex,ind+arr[ind]);
+        int maxreachind=arr[0],steps=arr[0],jumps=0;
+        for(int i=1;i<n;i++){
+            maxreachind=Math.max(maxreachind,i+arr[i]);
             steps--;
-            if(steps==0){
+            if (steps==0){
                 jumps++;
-                steps=maxreachindex-ind;
-            }
+                steps=maxreachind-i;
 
+            }
         }
         System.out.println(jumps);
     }

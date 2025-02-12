@@ -1,3 +1,5 @@
+package set3;
+
 import java.util.*;
 
 class FoodItem implements Comparable<FoodItem>{
